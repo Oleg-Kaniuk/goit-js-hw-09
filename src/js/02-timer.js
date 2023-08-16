@@ -28,7 +28,7 @@ startBtn.disabled = true;
 
 Report.info(
   'МОЇ ВІТАННЯ ',
-  'БУДЬ ЛАСКА ОБЕРИ ДАТУ І НАТИСНИ КНОПКУ START',
+  'БУДЬ ЛАСКА ОБЕРІТЬ ДАТУ І НАТИСНІТЬ КНОПКУ START',
   'Ok'
 );
 
@@ -50,7 +50,7 @@ flatpickr(datatimeInput, {
             startBtn.disabled = false;
             Report.success(
                 'ВСЕ ДОБРЕ!',
-                'ДЛЯ ТОГО, ЩОБ ЗАПУСТИТИ ТАЙМЕР НАТИСНИ КНОПКУ START',
+                'ДЛЯ ТОГО, ЩОБ ЗАПУСТИТИ ТАЙМЕР НАТИСНІТЬ КНОПКУ START',
                 'Ok'
             );
         }
@@ -73,7 +73,7 @@ function convertMs(ms) {
 }
 
 function addLeadingZero(value) {
-  return String(value).padStart(2, '0');
+  return value.toString().padStart(2, '0');
 }
 
 function onStartTimer() {
@@ -92,7 +92,7 @@ const timer = {
       if (timeDifference <= 1000) {
         this.stop();
         Report.info(
-          'МОЇ ВІТАННЯ! ТАЙМЕР ЗУПИНИВСЯ',
+          'ТАЙМЕР ЗУПИНИВСЯ!',
           'ЯКЩО ВИ ХОЧЕТЕ ЗАПУСТИТИ ТАЙМЕР НАТИСНІТЬ КНОПКУ START АБО ПЕРЕЗАВАНТАЖТЕ СТОРІНКУ',
           'Ok'
         );
